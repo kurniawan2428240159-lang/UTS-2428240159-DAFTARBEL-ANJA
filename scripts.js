@@ -38,12 +38,13 @@ function tampil() {
     //lakukan perulangan ataulooping(foreacrh)
     hasil.array.forEach(element => {
         document.getElementById("daftar-belanja").innerHTML += `
-        <div class="col-lg-4 col-md-6"> 
-        
-        <h4 class="text-center bg-dark rounded-5 text-primary mt-3">${element.nama}</h4> 
-        <h6 class="text-center bg-dark rounded-5 text-white"> ${element.barang} </h6>
-        <h6 class="text-center bg-dark rounded-5 text-white"> ${element.keterangan} </h6>
-        <h6 class="text-center bg-dark rounded-5 text-white"> ${element.jumlah} </h6>
+        <div class="col-lg-3 col-mb-6 col-md-3"> 
+            <div class="col-lg-3 col-mb-6 col-md-3">
+                <h4 class="text-primary"?  ${element.nama}</h4> 
+                <h6 class="text-primary">  ${element.barang} </h6>
+                <h6 class="text-primary">  ${element.keterangan} </h6>
+                <h6 class="text-primary">  ${element.jumlah} </h6>
+            </div>
         <div>`
         });    
 }

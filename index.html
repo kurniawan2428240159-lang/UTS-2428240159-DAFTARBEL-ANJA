@@ -9,21 +9,26 @@
     crossorigin="anonymous">
 </head>
 <body>
-    <h2 class="text-center bg-primary text-white p-1 rounded-5 mt-3">daftar belanja</h2>
-    nama
-    <input type="text" id="nama" class="from-control border-primary mb-3"> <br>
-    barang
-    <input type="text" id="barang" class="from-control border-primary mb-3"> <br>
-    jumlah
-    <input type="text" id="jumlah" class="from-control border-primary mb-3"> <br>
-    keterangan
-    <input type="text" id="keterangan" class="from-control border-primary mb-3"> <br>
+    <div class="conatiner">
+         <h2 class="text-center bg-primary text-white p-3 rounded-5 mt-3">daftar belanja</h2>
+        nama
+        <input type="text" id="nama" class="from-control border-primary mb-3"> 
+        barang
+        <input type="text" id="barang" class="from-control border-primary mb-3"> 
+        jumlah
+        <input type="text" id="jumlah" class="from-control border-primary mb-3"> 
+        keterangan
+        <input type="text" id="keterangan" class="from-control border-primary mb-3"> 
     
-    <button class="btn btn-dark" onclick="simpan()">Simpan</button>
+        <button class="btn btn-primary" onclick="simpan()">Simpan</button>
+     
+        <div id="daftar-belanja" class="row"> </div>
+    </div>
     
-    <div id="daftar-belanja" class="row"> </div>
 
     <script src="scripts.js"></script>
+
+    
     
 </body>
 </html>
