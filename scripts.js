@@ -1,6 +1,6 @@
-let nama = document.getElementById("nama");
-let barang = document.getElementById("barang");
+let namabarang = document.getElementById("namabarang");
 let jumlah = document.getElementById("jumlah");
+let keterangan = document.getElementById("keterangan");
 
 function simpan() {
 
@@ -15,9 +15,9 @@ function simpan() {
 
     //simpan value.npm dan nama ke dalam object
     data.push({
-        nama: npm.value,
-        barang: nama.value,
-        jumlah: jumlah.value
+        nama: namabarang.value,
+        jumlah: jumlah.value,
+        keterangan: keterangan.value
     })
     console.log(data)
 
@@ -39,9 +39,8 @@ function tampil() {
     hasil.array.forEach(element => {
         document.getElementById("daftar-belanja").innerHTML += `
         <div class="col-lg-3 col-mb-6 col-md-3"> 
-            <div class="col-lg-3 col-mb-6 col-md-3">
-                <h4 class="text-primary"?  ${element.nama}</h4> 
-                <h6 class="text-primary">  ${element.barang} </h6>
+            <div class="card-body">
+                <h4 class="text-primary"?  ${element.namabarang}</h4> 
                 <h6 class="text-primary">  ${element.keterangan} </h6>
                 <h6 class="text-primary">  ${element.jumlah} </h6>
             </div>
