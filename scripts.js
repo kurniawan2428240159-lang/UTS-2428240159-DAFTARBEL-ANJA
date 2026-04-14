@@ -3,15 +3,11 @@ let barang = document.getElementById("barang");
 let jumlah = document.getElementById("jumlah");
 
 function simpan() {
-   localStorage.setItem("daftar", JSON.stringify(data))
-
-   tampil()
-}
 
     //jika local storage belum ada isi/value
-    if (localStorage.getItem("mahasiswa") === null) {
+    if (localStorage.getItem("daftare") === null) {
         //simpan array kosong[]
-        localStorage.setItem("mahasiswa", "[]")
+        localStorage.setItem("daftar", "[]")
     }
     //panggil local storage(konvers String ke object)
     let data = JSON.parse(localStorage.getItem("mahasiswa"))
@@ -19,15 +15,36 @@ function simpan() {
 
     //simpan value.npm dan nama ke dalam object
     data.push({
-        npm: npm.value,
-        nama: nama.value,
-        image: image.value
+        nama: npm.value,
+        barang: nama.value,
+        jumlah: jumlah.value
     })
     console.log(data)
 
     //simpan data terbaru kedalam local storage
     //konversi dari objek ke string
-    localStorage.setItem("mahasiswa", JSON.stringify(data))
+    localStorage.setItem("daftar", JSON.stringify(data))
     //panggil tampil
     tampil()
 }
+
+function tampil() {
+    //panggil  dulu localk stroge 
+    let hasil = JSON.parse(localStorage.getItem("daftar"))
+
+    //clear
+    document.getElementById("daftar-belanja").innerHTML = ""
+
+    //lakukan perulangan ataulooping(foreacrh)
+    hasil.array.forEach(element => {
+        document.getElementById("daftar-belanja").innerHTML += `
+        <div class="col-lg-4 col-md-6"> 
+        
+        <h4 class="text-center bg-dark rounded-5 text-primary mt-3">${element.nama}</h4> 
+        <h6 class="text-center bg-dark rounded-5 text-white"> ${element.barang} </h6>
+        <h6 class="text-center bg-dark rounded-5 text-white"> ${element.keterangan} </h6>
+        <h6 class="text-center bg-dark rounded-5 text-white"> ${element.jumlah} </h6>
+        <div>`
+        });    
+}
+//jalankan fu
