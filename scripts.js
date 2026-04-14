@@ -3,12 +3,10 @@ let barang = document.getElementById("barang");
 let jumlah = document.getElementById("jumlah");
 
 function simpan() {
-    console.log(npm.value)
-    console.log(nama.value)
-    console.log(image.value)
+   localStorage.setItem("daftar", JSON.stringify(data))
 
-    // localStorage.setItem("npm", npm.value)
-    // localStorage.setItem("nama", nama.value)
+   tampil()
+}
 
     //jika local storage belum ada isi/value
     if (localStorage.getItem("mahasiswa") === null) {
